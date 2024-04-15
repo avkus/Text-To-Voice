@@ -8,7 +8,7 @@ def text_to_audio(bark_model='suno/bark', voice_preset='v2/ru_speaker_3'):
     #device = 'cuda' if torch.cuda.is_available() else 'cpu'
 
     st.header(f"> test <", divider="rainbow")
-    st.write(device)
+    st.write("some")
     # model = model.to(device)
     # processor = AutoProcessor.from_pretrained(bark_model)
     #
