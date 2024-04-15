@@ -1,3 +1,4 @@
+import streamlit as st
 from transformers import BarkModel, AutoProcessor
 import torch
 import scipy
@@ -5,6 +6,8 @@ import scipy
 def text_to_audio(bark_model='suno/bark', voice_preset='v2/ru_speaker_3'):
     model = BarkModel.from_pretrained(bark_model)
     device = 'cuda' if torch.cuda.is_available() else 'cpu'
+
+    st.header(f"> {device} <", divider="rainbow")
 
     model = model.to(device)
     processor = AutoProcessor.from_pretrained(bark_model)
